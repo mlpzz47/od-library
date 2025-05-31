@@ -32,12 +32,28 @@
             </tbody>
         </table>
         <div class="add-book-container">
-            <button class="add-book-button">+ Add Book</button>
+            <button class="open-modal-button" id="open-modal">+ Add Book</button>
         </div>
-
     </div>
-
-
+    <div class="modal">
+        <button class="close-modal" type="button">Go Back</button>
+        <form action="#" method="get" class="modal__form">
+            <div class="modal__input-container">
+                <label for="" class="modal__label">Book Name</label>
+                <input class="modal__input" id="book-input" type="text" minlength="3" required>
+            </div>
+            <div class="modal__input-container">
+                <label for="" class="modal__label">Author</label>
+                <input class="modal__input" id="author-input" type="text" minlength="3" required>
+            </div>
+            <div class="modal__input-container">
+                <label for="" class="modal__label">Number of Pages</label>
+                <input class="modal__input" id="pages-input" type="number" required>
+            </div>
+            <button class="modal__btn" id="add-book" type="submit">Add Book</button>
+        </form>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

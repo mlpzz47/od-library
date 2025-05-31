@@ -44,8 +44,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: 
-    radial-gradient(circle, #111 5%, #377 8%, #111 11%, #c86 15%, #111 18%, #377 21%, #111 24%, #c86 27%, #111 30%, #377 33%, #111 36%, #c86 39%, #111 42%, #377 45%, #111 48%, #c86 51%, #111 54%, #377 57%, #111 60%, #c86 63%, #111 66%, #377 69%, #111 72%, #c86 75%, #111 78%, #377 81%, #111 84%, #c86 87%, #111 90%, #377 93%, #111 96%, #c86 99%);
+    background: fixed
+    radial-gradient(circle, #111 5%, #377 8%, #111 11%, #c86 15%, #111 18%, #377 21%, #111 24%, #c86 27%, #111 30%, #377 33%, #111 36%, #c86 39%, #111 42%, #377 45%, #111 48%, #c86 51%, #111 54%, #377 57%, #111 60%, #c86 63%, #111 66%, #377 69%, #111 72%, #c86 75%, #111 78%, #377 81%, #111 84%, #c86 87%, #111 90%, #377 93%, #111 96%, #c86 99%) center center;
     font-family: sans-serif;
     width: 100%;
     min-height: 100dvh;
@@ -56,7 +56,7 @@ body {
     min-height: 100vh;
     padding: 30px 50px;
     margin: auto;
-    backdrop-filter: grayscale(1);
+    /* backdrop-filter: grayscale(1); */
 }
 
 .library {
@@ -80,23 +80,111 @@ body {
     accent-color: #000;
 }
 
-.read-input::checkmark {
-    padding: 3px;
-}
-
 .remove-button {
     background-color: #f55;
     border: none;
     border-radius: 7px;
     padding: 5px 10px;
+    color: #000;
+}
+
+.remove-button:is(:hover,:focus) {
+    cursor: pointer;
+    background-color: #800;
     color: #ededed;
 }
 
-.add-book-button {
+.open-modal-button {
     margin-top: 20px;
     background-color: #8f8;
     color: #000;
     border: none;
     padding: 5px 30px;
     border-radius: 8px;
+}
+
+.open-modal-button:is(:hover,:focus) {
+    cursor: pointer;
+    background-color: #060;
+    color: #ededed;
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px) brightness(.6);
+}
+
+.close-modal {
+    background-color: #377;
+    color: #ededed;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.close-modal:is(:hover,:focus) {
+    cursor: pointer;
+    background-color: #3cc;
+    color: #111;
+}
+
+.modal__form {
+    margin: auto;
+    width: 50%;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    padding: 30px;
+    display: flex;
+    background-color: #0007;
+    flex-direction: column;
+}
+
+.modal__input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 8px;
+}
+
+.modal__label {
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    letter-spacing: 1px;
+}
+
+.modal__input {
+    outline: none;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.modal__input:is(:hover,:focus) {
+    background-color: #fff3;
+    border-radius: 8px;
+}
+
+.modal__btn {
+    width: 50%;
+    margin: 20px auto;
+    padding: 4px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ededed;
+    letter-spacing: 1px;
+}
+
+.modal__btn:is(:hover,:focus) {
+    cursor: pointer;
+    background-color: #c86;
 }
