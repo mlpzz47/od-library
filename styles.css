@@ -1,0 +1,102 @@
+/* Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+body {
+    background: 
+    radial-gradient(circle, #111 5%, #377 8%, #111 11%, #c86 15%, #111 18%, #377 21%, #111 24%, #c86 27%, #111 30%, #377 33%, #111 36%, #c86 39%, #111 42%, #377 45%, #111 48%, #c86 51%, #111 54%, #377 57%, #111 60%, #c86 63%, #111 66%, #377 69%, #111 72%, #c86 75%, #111 78%, #377 81%, #111 84%, #c86 87%, #111 90%, #377 93%, #111 96%, #c86 99%);
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100dvh;
+}
+
+.library-container {
+    width: fit-content;
+    min-height: 100vh;
+    padding: 30px 50px;
+    margin: auto;
+    backdrop-filter: grayscale(1);
+}
+
+.library {
+    border-collapse: collapse;
+}
+
+.library__header, .library__data {
+    border: 1px solid #000;
+    padding: 10px 30px;
+}
+
+.library__header {
+    background-color: #f84;
+}
+
+.library__data {
+    background-color: #fb8;
+}
+
+.read-input {
+    accent-color: #000;
+}
+
+.read-input::checkmark {
+    padding: 3px;
+}
+
+.remove-button {
+    background-color: #f55;
+    border: none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color: #ededed;
+}
+
+.add-book-button {
+    margin-top: 20px;
+    background-color: #8f8;
+    color: #000;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 8px;
+}
