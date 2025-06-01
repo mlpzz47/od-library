@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="library-container">
-        <table class="library">
-            <thead>
+        <table class="library" id="library">
+            <thead id="library-head">
                 <tr>
                     <th scope="col" class="library__header">Book</th>
                     <th scope="col" class="library__header">Author</th>
@@ -17,18 +17,7 @@
                     <th scope="col" class="library__header">Read Status</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td class="library__data" id="book"></td>
-                    <td class="library__data" id="author"></td>
-                    <td class="library__data" id="pages"></td>
-                    <td class="library__data" id="read">
-                        <input type="checkbox" class="read-input">
-                    </td>
-                    <td class="library__data" id="remove-book">
-                        <button type="button" class="remove-button">Remove Book</button>
-                    </td>
-                </tr>
+            <tbody id="library-body">
             </tbody>
         </table>
         <div class="add-book-container">
@@ -39,16 +28,19 @@
         <button class="close-modal" type="button">Go Back</button>
         <form action="#" method="get" class="modal__form">
             <div class="modal__input-container">
-                <label for="" class="modal__label">Book Name</label>
-                <input class="modal__input" id="book-input" type="text" minlength="3" required>
+                <label for="book-input" class="modal__label">Book Name</label>
+                <input class="modal__input" id="book-input" type="text" minlength="1" maxlength="30" required>
+                <span class="modal__error" id="name-error" hidden>*Field required (3-30 characters)</span>
             </div>
             <div class="modal__input-container">
-                <label for="" class="modal__label">Author</label>
-                <input class="modal__input" id="author-input" type="text" minlength="3" required>
+                <label for="author-input" class="modal__label">Author</label>
+                <input class="modal__input" id="author-input" type="text" minlength="3" maxlength="30" required>
+                <span class="modal__error" id="author-error" hidden>*Field required (3-30 characters)</span>
             </div>
             <div class="modal__input-container">
-                <label for="" class="modal__label">Number of Pages</label>
-                <input class="modal__input" id="pages-input" type="number" required>
+                <label for="pages-input" class="modal__label">Number of Pages</label>
+                <input class="modal__input" id="pages-input" type="number" required min="1" max="69000">
+                <span class="modal__error" id="pages-error" hidden>*Invalid number of pages</span>
             </div>
             <button class="modal__btn" id="add-book" type="submit">Add Book</button>
         </form>
